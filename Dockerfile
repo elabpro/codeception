@@ -44,6 +44,7 @@ RUN set -eux; \
         codeception/module-rest \
         codeception/module-sequence \
         codeception/module-soap \
+        codeception/module-laravel \
         codeception/module-webdriver; \
     composer update --no-dev --prefer-dist --no-interaction --optimize-autoloader --apcu-autoloader; \
     ln -s /codecept/vendor/bin/codecept /usr/local/bin/codecept; \
