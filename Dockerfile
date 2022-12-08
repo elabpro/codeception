@@ -63,6 +63,8 @@ RUN set -eux; \
 COPY --from=VISUALDIFF /app/subimage/build/subimage /
 COPY --from=VISUALDIFF /usr/local/lib/libopencv* /usr/lib/
 COPY --from=VISUALDIFF /usr/lib/x86_64-linux-gnu/libpng* /usr/lib/x86_64-linux-gnu/
+COPY clean_mess.sh /
+RUN /clean_mess.sh
 
 ENTRYPOINT ["codecept"]
 
